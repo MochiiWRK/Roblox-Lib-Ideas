@@ -1,0 +1,99 @@
+name: Library idea
+description: Post a Roblox library that should exist. Two sentences is a valid submission.
+title: "[idea] "
+labels: ["status:idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Only the pitch is required. Everything below it is optional and can be
+        filled in later by you or by anyone else in the comments.
+
+  - type: textarea
+    id: pitch
+    attributes:
+      label: The pitch
+      description: What is it, and what does it save people from writing themselves?
+      placeholder: |
+        Armor lib which handles equip/unequip of armor to R6/R15/Rthro/custom rigs,
+        and can handle main, accessory, and moving-part accessories (wings, tails, ears).
+    validations:
+      required: true
+
+  - type: dropdown
+    id: areas
+    attributes:
+      label: Areas
+      description: Pick all that apply. Used to filter the index.
+      multiple: true
+      options:
+        - character
+        - animation
+        - replication
+        - ui
+        - data
+        - physics
+        - audio
+        - networking
+        - tooling
+        - ai
+        - math
+        - testing
+        - monetization
+        - misc
+    validations:
+      required: false
+
+  - type: textarea
+    id: cases
+    attributes:
+      label: Cases it has to survive
+      description: >
+        The specific situations that make this hard. Rigs, states, edge cases.
+        This is the section that decides whether anyone can actually build it.
+      placeholder: |
+        - R6, R15, Rthro, and fully custom rigs
+        - Moving accessories behaving differently per state: jump, swim, fall, sit, ragdoll
+        - Layered clothing already occupying the attachment
+        - Character respawn and rig swap mid-session
+    validations:
+      required: false
+
+  - type: textarea
+    id: api
+    attributes:
+      label: API sketch
+      description: Luau. Does not have to compile.
+      render: lua
+    validations:
+      required: false
+
+  - type: textarea
+    id: prior_art
+    attributes:
+      label: Prior art
+      description: >
+        Anything that already does part of this, and why it is not enough.
+        "I could not find anything" is a useful answer too.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Rough size
+      options:
+        - small - a weekend
+        - medium - a couple of weeks
+        - large - a real project
+        - cursed - probably should not exist, post it anyway
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: claiming
+    attributes:
+      label: Are you building it?
+      options:
+        - label: I am planning to build this myself
+          required: false

@@ -1,0 +1,42 @@
+name: Claim an idea
+description: Tell everyone you are actually building one of these, so nobody duplicates it.
+title: "[claim] "
+labels: ["status:claimed"]
+body:
+  - type: input
+    id: idea
+    attributes:
+      label: Which idea?
+      description: Issue number or the ideas/ filename.
+      placeholder: "#1 / ideas/0001-armor-lib.md"
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repo
+      description: Where the implementation will live. An empty repo is fine.
+      placeholder: https://github.com/you/armor-lib
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: What you are actually committing to
+      description: >
+        Be honest about the subset. "Equip/unequip on R6 and R15 only, no moving
+        accessories yet" is a much better claim than an implied promise of everything.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Ground rules
+      options:
+        - label: MIT or Apache-2.0 licensed
+          required: true
+        - label: If I go quiet for a couple of months, someone else can pick this up
+          required: true

@@ -1,0 +1,44 @@
+name: Idea index
+
+on:
+  push:
+    branches: [main]
+    paths: ["ideas/**", "scripts/**", "README.md"]
+  pull_request:
+    paths: ["ideas/**", "scripts/**", "README.md"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # On PRs: fail if the frontmatter is malformed or the table is stale.
+      - name: Validate
+        if: github.event_name == 'pull_request'
+        run: node scripts/build-index.mjs --check
+
+      # On main: just fix it and commit.
+      - name: Rebuild index
+        if: github.event_name != 'pull_request'
+        run: node scripts/build-index.mjs
+
+      - name: Commit if changed
+        if: github.event_name != 'pull_request'
+        run: |
+          if [ -n "$(git status --porcelain README.md)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: rebuild idea index"
+            git push
+          else
+            echo "No change."
+          fi

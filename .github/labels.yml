@@ -1,0 +1,60 @@
+# Source of truth for this repo's labels.
+# Apply with:  node scripts/sync-labels.mjs        (needs the gh CLI, authenticated)
+
+- name: "status:idea"
+  color: "ededed"
+  description: Posted, unexamined, possibly cursed
+- name: "status:speced"
+  color: "0e8a16"
+  description: Has a spec file in ideas/
+- name: "status:claimed"
+  color: "fbca04"
+  description: Someone is building it
+- name: "status:released"
+  color: "1d76db"
+  description: Exists and is installable
+- name: "status:abandoned"
+  color: "b60205"
+  description: Claimed then dropped, or decided against
+
+- name: "area:character"
+  color: "c5def5"
+- name: "area:animation"
+  color: "c5def5"
+- name: "area:replication"
+  color: "c5def5"
+- name: "area:ui"
+  color: "c5def5"
+- name: "area:data"
+  color: "c5def5"
+- name: "area:physics"
+  color: "c5def5"
+- name: "area:audio"
+  color: "c5def5"
+- name: "area:networking"
+  color: "c5def5"
+- name: "area:tooling"
+  color: "c5def5"
+- name: "area:ai"
+  color: "c5def5"
+- name: "area:math"
+  color: "c5def5"
+- name: "area:testing"
+  color: "c5def5"
+- name: "area:monetization"
+  color: "c5def5"
+- name: "area:misc"
+  color: "c5def5"
+
+- name: "size:small"
+  color: "f9d0c4"
+- name: "size:medium"
+  color: "f9d0c4"
+- name: "size:large"
+  color: "f9d0c4"
+- name: "size:cursed"
+  color: "5319e7"
+  description: Probably should not exist
+- name: "good first idea"
+  color: "7057ff"
+  description: Small, well-scoped, a good first thing to actually build

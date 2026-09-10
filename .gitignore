@@ -1,0 +1,20 @@
+# Roblox / tooling
+*.rbxl
+*.rbxlx
+*.rbxlx.lock
+*.rbxm
+sourcemap.json
+/Packages/
+/DevPackages/
+/ServerPackages/
+
+# Node (only the scripts/ helpers)
+node_modules/
+npm-debug.log*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
