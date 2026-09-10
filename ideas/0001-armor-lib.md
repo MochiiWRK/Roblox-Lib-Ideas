@@ -5,7 +5,7 @@ slug: armor-lib
 status: idea
 areas: [character, animation, replication]
 complexity: large
-proposed_by: igotyour
+proposed_by: MochiiWRK
 issue: null
 repo: null
 created: 2026-09-09

@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
   - name: Just want to argue about an existing idea?
-    url: https://github.com/OWNER/roblox-lib-ideas/issues?q=is%3Aissue+label%3Astatus%3Aidea
+    url: https://github.com/MochiiWRK/roblox-lib-ideas/issues?q=is%3Aissue+label%3Astatus%3Aidea
     about: Comment on the open ideas instead of opening a new one.
