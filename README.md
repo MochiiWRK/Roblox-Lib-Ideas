@@ -42,7 +42,7 @@ worth more than a polished library nobody needed.
 
 | # | Idea | Status | Areas | Size | Links |
 | --- | --- | --- | --- | --- | --- |
-| 0001 | [Armor Lib](ideas/0001-armor-lib.md) | idea | character, animation, replication | large | — |
+| 0001 | [Armor Lib](ideas/0001-armor-lib.md) | **speced** | character, animation, replication | large | [#1](../../issues/1) |
 
 <!-- IDEAS:END -->
 

@@ -2,11 +2,11 @@
 id: 0001
 title: Armor Lib
 slug: armor-lib
-status: idea
+status: speced
 areas: [character, animation, replication]
 complexity: large
 proposed_by: MochiiWRK
-issue: null
+issue: 1
 repo: null
 created: 2026-09-09
 ---
